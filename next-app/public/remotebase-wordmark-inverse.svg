@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 56" role="img" aria-label="Remotebase">
+  <g transform="translate(0,8)">
+    <rect x="0" y="0" width="40" height="40" rx="4" fill="#FFFFFF"></rect>
+    <rect x="10" y="9" width="3.75" height="22.5" fill="#0F172A"></rect>
+    <rect x="10" y="9" width="15" height="3.75" fill="#0F172A"></rect>
+    <rect x="10" y="18.125" width="13.75" height="3.75" fill="#0F172A"></rect>
+    <rect x="21.25" y="9" width="3.75" height="13.125" fill="#0F172A"></rect>
+    <rect x="17.5" y="21.875" width="3.75" height="5.625" fill="#0F172A"></rect>
+    <rect x="21.25" y="25.625" width="3.75" height="5.625" fill="#0F172A"></rect>
+    <rect x="25" y="27.5" width="3.75" height="3.75" fill="#C2410C"></rect>
+  </g>
+  <text x="56" y="38" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="30" letter-spacing="-1.4" fill="#FFFFFF">Remotebase</text>
+</svg>

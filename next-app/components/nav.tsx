@@ -1,0 +1,58 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+
+export function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return (
+    <nav className={`rb-nav ${scrolled ? 'is-scrolled' : ''}`}>
+      <div className="container rb-nav-inner">
+        <a href="#top" className="rb-mark" aria-label="Remotebase home">
+          <Image
+            src="/remotebase-logo-dark.png"
+            alt="Remotebase"
+            width={1950}
+            height={338}
+            priority
+            className="rb-mark-img"
+          />
+        </a>
+
+        <div className="rb-nav-links">
+          <a href="#ventures" className="rb-nav-link">
+            <span className="rb-nav-dot" aria-hidden="true" />
+            Ventures
+          </a>
+          <a href="#axis" className="rb-nav-link">
+            <span className="rb-nav-dot" aria-hidden="true" />
+            Axis
+          </a>
+        </div>
+
+        <a className="rb-cta" href="#contact">
+          Book a call
+          <span className="rb-cta-arr" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path
+                d="M3 9 L9 3 M5 3 H9 V7"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </nav>
+  );
+}
