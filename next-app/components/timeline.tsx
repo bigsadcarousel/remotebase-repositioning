@@ -43,7 +43,7 @@ export function Timeline() {
           <div>
             <span className="eyebrow">What you get in thirty days</span>
             <h2>
-              From &ldquo;let&apos;s chat&rdquo; to &ldquo;it&apos;s running&rdquo; in 30 days
+              {'From "let\'s chat" to "it\'s running" in 30 days'}
               <span className="acc">.</span>
             </h2>
           </div>

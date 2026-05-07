@@ -74,7 +74,7 @@ export function Hero() {
             <br />
             You need it shipped<span className="acc">.</span>
           </h1>
-          <p className="lede-italic">&ldquo;Working systems. Not slide decks.&rdquo;</p>
+          <p className="lede-italic">{'"Working systems. Not slide decks."'}</p>
           <p className="sub">
             We build AI that runs your business. In 30 days. Trusted by Northwestern Mutual,
             Gridware, and Fireflies AI.

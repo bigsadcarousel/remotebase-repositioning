@@ -19,8 +19,7 @@ export function CaseStudy() {
           <div>
             <span className="eyebrow">Featured case · Northwestern Mutual</span>
             <h3 className="cs-headline">
-              &ldquo;How a leading American insurer launched the world&apos;s first DAO-based
-              pet insurance platform.&rdquo;
+              {'"How a leading American insurer launched the world\'s first DAO-based pet insurance platform."'}
             </h3>
             <p className="cs-deck">
               A 169-year-old financial services company partnered with Remotebase to build

@@ -113,7 +113,7 @@ export function FinalCTA() {
             <br />
             We&apos;ll tell you what we can ship<span className="acc">.</span>
           </h2>
-          <div className="italic">&ldquo;30 minutes. That&apos;s all we need.&rdquo;</div>
+          <div className="italic">{'"30 minutes. That\'s all we need."'}</div>
           <p className="sub">
             If we can ship it, we&apos;ll tell you when. If we can&apos;t, we&apos;ll tell
             you why.

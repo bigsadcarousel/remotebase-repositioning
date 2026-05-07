@@ -25,7 +25,7 @@ export function FailureFlow() {
           <div>
             <span className="eyebrow">The pattern we keep seeing</span>
             <h2>
-              Two years of &ldquo;AI strategy&rdquo; later. What&apos;s actually running
+              {'Two years of "AI strategy" later. What\'s actually running'}
               <span className="acc">?</span>
             </h2>
           </div>

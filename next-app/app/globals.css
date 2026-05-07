@@ -1005,12 +1005,10 @@ button { font-family: inherit; }
   font-weight: 600;
   color: var(--color-ink);
   line-height: 1.4;
-  max-width: 920px;
   font-family: var(--font-sans);
   letter-spacing: -0.02em;
   border-top: 2px solid var(--color-violet);
   padding-top: 36px;
-  text-wrap: balance;
 }
 .fail-close .acc { color: var(--color-violet); }
 
