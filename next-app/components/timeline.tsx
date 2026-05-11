@@ -66,6 +66,19 @@ export function Timeline() {
               ))}
             </div>
           </div>
+
+          <div className="tl-track-vertical" aria-hidden="true">
+            {STOPS.map((s) => (
+              <div className="tl-stop-v" key={`v-${s.step}`}>
+                <div className="tl-dot-v">{s.step}</div>
+                <div>
+                  <div className="tl-day-v">{s.day}</div>
+                  <div className="tl-h-v">{s.title}</div>
+                  <div className="tl-sub-v">{s.sub}</div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

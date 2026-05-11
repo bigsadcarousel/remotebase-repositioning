@@ -1,7 +1,8 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Allow LAN-IP access in dev (HMR + hydration). Add hosts as needed.
+  allowedDevOrigins: ['192.168.1.22'],
 };
 
 export default nextConfig;

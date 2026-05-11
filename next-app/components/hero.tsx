@@ -62,7 +62,6 @@ export function Hero() {
   return (
     <section id="top" className="hero" ref={heroRef}>
       <HeroBg />
-      <HeroProcess />
       <div className="container hero-inner">
         <div>
           <div className="chap">01</div>
@@ -89,6 +88,7 @@ export function Hero() {
           </div>
         </div>
       </div>
+      <HeroProcess />
     </section>
   );
 }

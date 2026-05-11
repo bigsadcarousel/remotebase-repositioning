@@ -1969,3 +1969,265 @@ button { font-family: inherit; }
   .cs-stats { grid-template-columns: 1fr; }
   .cs-stats > div { border-right: 0; border-bottom: 1px solid var(--color-ink-hairline); }
 }
+
+/* =============================================================
+   RESPONSIVE — Tailwind-aligned breakpoints (640 / 768 / 1024 / 1280)
+   Mobile-first overrides; desktop design is locked at xl+.
+   ============================================================= */
+
+/* No horizontal scroll on the page itself */
+html, body { overflow-x: hidden; max-width: 100vw; }
+
+/* Container gutter tightens on mobile */
+@media (max-width: 767px) {
+  :root { --gutter: 20px; }
+  .container { padding: 0 var(--gutter); }
+  .section { padding: 80px 0; }
+  .section.tight { padding: 56px 0; }
+}
+
+/* Section header H2 type scale: mobile-first */
+@media (max-width: 1023px) {
+  .shead h2 { font-size: clamp(36px, 5.6vw, 64px); line-height: 1.04; }
+  .final h2 { font-size: clamp(40px, 6.4vw, 72px); line-height: 1.02; }
+  .hero h1 { font-size: clamp(40px, 6.8vw, 72px); line-height: 1.04; }
+}
+@media (max-width: 639px) {
+  .shead h2 { font-size: 36px; }
+  .final h2 { font-size: 40px; }
+  .lede-italic, .final .italic { font-size: 19px; }
+  .sub { font-size: 16px; }
+}
+
+/* HERO — process card moves below headline at lg and below; full-width on mobile */
+@media (max-width: 1023px) {
+  .hp {
+    position: static;
+    top: auto; right: auto;
+    width: auto;
+    max-width: 520px;
+    margin: 32px auto 0;
+    /* Re-show on tablet (overrides .hp display:none from 1140 rule above) */
+    display: block !important;
+  }
+  .hero { min-height: 0; padding: 72px 0 56px; }
+  .hero h1 { margin-bottom: 20px; }
+  .hero .lede-italic { margin-bottom: 16px; padding-left: 16px; }
+  .hero .sub { margin-bottom: 28px; }
+}
+@media (max-width: 767px) {
+  .hero { padding: 56px 0 40px; }
+  .hero h1 { margin-bottom: 16px; }
+  .hero .lede-italic { margin-bottom: 12px; }
+  .hero .sub { margin-bottom: 22px; }
+  .hp { padding: 16px 16px 14px; margin-top: 20px; max-width: 100%; }
+  .hp-head { margin-bottom: 14px; }
+  .hp-track { height: 56px; margin-bottom: 12px; }
+  .hp-day { font-size: 8px; }
+  .hp-label { font-size: 11px; }
+}
+
+/* HERO H1 strike line — calibrate for smaller mobile font */
+@media (max-width: 1023px) {
+  .hero h1 .strike::after { height: 3px; top: 58%; }
+}
+@media (max-width: 639px) {
+  .hero h1 .strike::after { height: 3px; top: 60%; }
+}
+
+/* HERO CTAs stack and full-width on mobile */
+@media (max-width: 639px) {
+  .hero-ctas { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-ctas .btn { width: 100%; justify-content: center; padding: 16px 24px; }
+  .hero h1 { font-size: 38px; line-height: 1.05; max-width: 100%; }
+}
+
+/* LOGO BAR — denser on mobile */
+@media (max-width: 767px) {
+  .lb-track { gap: 40px; }
+  .lb-logo { padding: 0 4px; }
+}
+@media (max-width: 639px) {
+  :root { --lb-h: 22px; }
+  .lb-track { gap: 32px; }
+}
+
+/* FAILURE FLOW — stack month/text, hide right meta on mobile */
+@media (max-width: 767px) {
+  .fail-flow { padding-left: 0; }
+  .fail-spine { display: none; }
+  .fail-row {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+    padding: 14px 0 !important;
+  }
+  .fail-row-dot { display: none; }
+  .fail-row-step { font-size: 10px; }
+  .fail-row-card {
+    padding-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .fail-row-text { font-size: 18px; }
+  .fail-row-meta {
+    font-size: 10px;
+    color: var(--color-ink-faint);
+    text-align: left;
+  }
+  .fail-close { font-size: 22px; }
+}
+
+/* OFFER CARDS — single col below md, compact so 4 cards don't dominate */
+@media (max-width: 767px) {
+  .offer-grid { grid-template-columns: 1fr !important; gap: 0 !important; }
+  .offer-rows { gap: 14px; }
+  .offer-row, .offer-row-1, .offer-row-2 { grid-template-columns: 1fr; gap: 14px; }
+  .offer-card { padding: 22px 20px 20px; }
+  .offer-top { margin-bottom: 14px; }
+  .offer-h { font-size: 20px; line-height: 1.25; margin: 0; }
+  .offer-link { margin-top: 14px; padding-top: 14px; }
+}
+
+/* TIMELINE — vertical at lg and below */
+@media (max-width: 1023px) {
+  .tl-wrap { padding: 0; }
+  .tl-track { height: auto; display: flex; flex-direction: column; gap: 40px; }
+  .tl-rail, .tl-fill, .tl-stops { display: none !important; }
+  .tl-track::before { display: none; }
+}
+.tl-track-vertical { display: none; }
+@media (max-width: 1023px) {
+  .tl-track-vertical { display: flex; flex-direction: column; gap: 28px; }
+  .tl-stop-v {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  .tl-stop-v .tl-day-v {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-ink-mute);
+    margin-bottom: 8px;
+  }
+  .tl-stop-v .tl-dot-v {
+    width: 56px; height: 56px;
+    background: var(--color-violet);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .tl-stop-v:last-child .tl-dot-v { background: var(--color-ink); }
+  .tl-stop-v .tl-h-v {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--color-ink);
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .tl-stop-v .tl-sub-v {
+    font-size: 14px;
+    color: var(--color-ink-mute);
+    line-height: 1.5;
+  }
+}
+
+/* CASE STUDY — headline scale, callouts stack */
+@media (max-width: 767px) {
+  .cs-headline { font-size: 26px !important; line-height: 1.2; }
+  .cs-deck { font-size: 15px; }
+  .cs-callouts {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    border: 1px solid var(--color-ink-hairline);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 32px;
+  }
+  .cs-callout {
+    padding: 18px 20px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--color-ink-hairline);
+  }
+  .cs-callout:last-child { border-bottom: 0; }
+  .cs-callout-tag { font-size: 10px; margin-bottom: 6px; }
+  .cs-callout-head { font-size: 18px; margin-bottom: 4px; }
+  .cs-callout-body { font-size: 13px; }
+}
+
+/* COMPARISON — stacked card view below md */
+@media (max-width: 767px) {
+  .cmp-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+    border: 0;
+    box-shadow: none;
+    overflow: visible;
+    padding-top: 14px;
+  }
+  .cmp-col {
+    border: 1px solid var(--color-ink-hairline) !important;
+    border-radius: 12px;
+    background: var(--color-surface);
+    overflow: visible;
+    position: relative;
+  }
+  .cmp-col + .cmp-col { border-left: 1px solid var(--color-ink-hairline) !important; border-top: 1px solid var(--color-ink-hairline) !important; }
+  .cmp-col.us {
+    border: 2px solid var(--color-violet) !important;
+    box-shadow: 0 12px 28px -16px rgba(92, 63, 232, 0.28);
+    margin-top: 18px;
+    overflow: visible;
+  }
+  .cmp-col.us::before { display: none; } /* hide the desktop top-bar; pill is enough */
+  .cmp-col.us .cmp-pill {
+    top: -12px !important;
+    left: 16px !important;
+    transform: none !important;
+    padding: 6px 12px !important;
+    font-size: 9.5px !important;
+    border-radius: 999px;
+  }
+  .cmp-head { padding: 22px 20px 18px !important; min-height: 0 !important; }
+  .cmp-row { padding: 14px 20px !important; min-height: 0 !important; }
+}
+
+/* WHY — single column below md */
+@media (max-width: 767px) {
+  .why-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .why-feat h3 { font-size: 26px; }
+  .why-feat-logos { gap: 18px; }
+  .why-feat-logos img { height: 18px; }
+  .why-pillar { gap: 16px; padding: 22px 0; }
+  .why-pillar h4 { font-size: 18px; }
+  .why-pillar p { font-size: 14px; }
+}
+
+/* FINAL CTA — hide target svg below md */
+@media (max-width: 767px) {
+  .final-bg { display: none !important; }
+  .final { padding: 96px 0; }
+}
+
+/* FOOTER — 1col mobile, 2col sm/md, 4col lg+ */
+@media (max-width: 1023px) {
+  .foot-inner { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+}
+@media (max-width: 639px) {
+  .foot-inner { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .foot { padding: 56px 0 28px; }
+  .foot-bottom { flex-wrap: wrap; gap: 12px; }
+}
+
+/* NAV mobile — links hidden, CTA tightens */
+@media (max-width: 767px) {
+  .rb-nav-links { display: none; }
+  .rb-cta { padding: 10px 14px; font-size: 13px; }
+  .rb-mark-img { height: 22px; }
+}
