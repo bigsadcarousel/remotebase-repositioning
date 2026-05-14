@@ -28,8 +28,13 @@ export function Nav() {
         </a>
 
         <div className="rb-nav-links">
-          <a href="#ventures" className="rb-nav-link">
-            Ventures
+          <a
+            href="https://remotebase.com/staffaugmentation"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rb-nav-link"
+          >
+            Staff Augmentation
           </a>
           <a
             href="https://remotebase.com/axis"
