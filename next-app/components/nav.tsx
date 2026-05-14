@@ -29,16 +29,24 @@ export function Nav() {
 
         <div className="rb-nav-links">
           <a href="#ventures" className="rb-nav-link">
-            <span className="rb-nav-dot" aria-hidden="true" />
             Ventures
           </a>
-          <a href="#axis" className="rb-nav-link">
-            <span className="rb-nav-dot" aria-hidden="true" />
+          <a
+            href="https://remotebase.com/axis"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rb-nav-link"
+          >
             Axis
           </a>
         </div>
 
-        <a className="rb-cta" href="#contact">
+        <a
+          className="rb-cta"
+          href="https://api.leadconnectorhq.com/widget/bookings/meet-remotebase"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Book a call
           <span className="rb-cta-arr" aria-hidden="true">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none">

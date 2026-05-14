@@ -84,7 +84,13 @@ export function Footer() {
             <h4>Connect</h4>
             <ul>
               <li>
-                <a href="#">Book a call</a>
+                <a
+                  href="https://api.leadconnectorhq.com/widget/bookings/meet-remotebase"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book a call
+                </a>
               </li>
               <li>
                 <a href="#">Contact</a>

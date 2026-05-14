@@ -73,13 +73,18 @@ export function Hero() {
             <br />
             You need it shipped<span className="acc">.</span>
           </h1>
-          <p className="lede-italic">{'"Built to ship. Not to impress."'}</p>
+          <p className="lede-italic">{'"From Idea to Product in four weeks."'}</p>
           <p className="sub">
             We build AI that runs your business. In 30 days. Trusted by Northwestern Mutual,
             Gridware, and Fireflies AI.
           </p>
           <div className="hero-ctas">
-            <a className="btn btn-violet btn-lg" href="#contact">
+            <a
+              className="btn btn-violet btn-lg"
+              href="https://api.leadconnectorhq.com/widget/bookings/meet-remotebase"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Book a 30-min call <Icon name="arrow-right" size={16} />
             </a>
             <a className="btn btn-outline-ink btn-lg" href="#process">

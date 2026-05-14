@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Remotebase — You don't need another AI deck. You need it shipped.",
+  title: 'Remotebase — From Idea to Product in four weeks.',
   description:
     'We build AI that runs your business. In 30 days. Trusted by Northwestern Mutual, Gridware, and Fireflies AI.',
 };

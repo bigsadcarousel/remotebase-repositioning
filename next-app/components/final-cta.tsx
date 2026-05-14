@@ -118,7 +118,12 @@ export function FinalCTA() {
             If we can ship it, we&apos;ll tell you when. If we can&apos;t, we&apos;ll tell
             you why.
           </p>
-          <a className="btn btn-violet btn-lg" href="#">
+          <a
+            className="btn btn-violet btn-lg"
+            href="https://api.leadconnectorhq.com/widget/bookings/meet-remotebase"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Book a 30-min call <Icon name="arrow-right" size={16} />
           </a>
         </div>
